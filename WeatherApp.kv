@@ -1,0 +1,71 @@
+<WeatherApp>
+	canvas.before:
+		Color:
+			rgba:1,1,1,1
+		Rectangle:
+			size:self.size
+	RelativeLayout:
+		Label:
+			text:root.currentConditions
+			color: (0,0,0,1)
+			text_size:self.size
+			halign:"center"
+			valign:"middle"
+			size_hint: (1,.2)
+			pos_hint: {"top": .95}
+			font_size:"70sp"
+			font_name:"./fonts/Roboto-Thin.ttf"
+		Label:
+			text:root.forecastString
+			color: (0,0,0,1)
+			text_size:self.size
+			halign:"center"
+			valign:"middle"
+			size_hint: (1,.2)
+			pos_hint: {"top": .77}
+			font_size:"40sp"
+			font_name:"./fonts/Roboto-Light.ttf"
+		BoxLayout:
+			size_hint: (1,.5)
+			pos_hint:{"top":.55}
+			orientation:"vertical"
+			Label:
+				text:root.day1
+				color: (0,0,0,1)
+				text_size:self.size
+				halign:"center"
+				valign:"middle"
+				font_size:"20sp"
+				font_name:"./fonts/Roboto-Light.ttf"
+			Label:
+				text:root.day2
+				color: (0,0,0,1)
+				text_size:self.size
+				halign:"center"
+				valign:"middle"
+				font_size:"20sp"
+				font_name:"./fonts/Roboto-Light.ttf"
+			Label:
+				text:root.day3
+				color: (0,0,0,1)
+				text_size:self.size
+				halign:"center"
+				valign:"middle"
+				font_size:"20sp"
+				font_name:"./fonts/Roboto-Light.ttf"
+			Label:
+				text:root.day4
+				color: (0,0,0,1)
+				text_size:self.size
+				halign:"center"
+				valign:"middle"
+				font_size:"20sp"
+				font_name:"./fonts/Roboto-Light.ttf"
+			Label:
+				text:root.day5
+				color: (0,0,0,1)
+				text_size:self.size
+				halign:"center"
+				valign:"middle"
+				font_size:"20sp"
+				font_name:"./fonts/Roboto-Light.ttf"

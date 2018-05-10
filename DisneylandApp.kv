@@ -1,0 +1,41 @@
+<DisneylandApp>
+	canvas.before:
+		Color:
+			rgba:1,1,1,1
+		Rectangle:
+			size:self.size
+	id:layout
+	orientation:"vertical"
+
+
+<RideTime>
+	rideName:root.rideName
+	Label:
+		text:root.waitTime
+		color: (0,0,0,1)
+		text_size:self.size
+		halign:"center"
+		valign:"middle"
+		font_size:"50sp"
+		font_name:"./fonts/Roboto-Thin.ttf"
+
+<Hours>
+	park:root.park
+	BoxLayout:
+		orientation:"vertical"
+		Label:
+			text:root.park
+			color: (0,0,0,1)
+			text_size:self.size
+			halign:"center"
+			valign:"middle"
+			font_size:"40sp"
+			font_name:"./fonts/Roboto-Thin.ttf"
+		Label:
+			text:root.hours
+			color: (0,0,0,1)
+			text_size:self.size
+			halign:"center"
+			valign:"middle"
+			font_size:"40sp"
+			font_name:"./fonts/Roboto-Thin.ttf"

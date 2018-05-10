@@ -1,0 +1,88 @@
+#: include WeatherApp.kv
+#: include DisneylandApp.kv
+
+<RPIClock>
+	canvas.before:
+		Color:
+			rgba:1,0,0,1
+		Rectangle:
+			size:self.size
+	RelativeLayout:
+		ClockScreen:
+			size_hint:(.4,1)
+			pos_hint:{"right":.4}
+		CarouselScreen:
+			size_hint:(.6,1)
+			pos_hint:{"right":1}
+
+<CarouselScreen>
+	Carousel:
+		id:Carousel
+		loop:True
+		direction:"bottom"
+		DisneylandApp:
+			Hours:
+				park:"DL"
+			RideTime:
+				rideName: "star"
+			RideTime:
+				rideName: "thunder"
+			RideTime:
+				rideName: "buzz"
+			RideTime:
+				rideName: "space"
+			RideTime:
+				rideName: "indy"
+		DisneylandApp:
+			Hours:
+				park:"DCA"
+			RideTime:
+				rideName: "guardians"
+			RideTime:
+				rideName: "soarin"
+			RideTime:
+				rideName: "midway"
+			RideTime:
+				rideName: "grizzly"
+		WeatherApp:
+
+<TestApp>
+	RelativeLayout:
+		Label:
+			text:"Hello world!"
+
+<ClockScreen>
+	canvas.before:
+		Color:
+			rgba:0,0,0,1
+		Rectangle:
+			size:self.size
+
+	RelativeLayout:
+		Label:
+			text:root.hours
+			text_size:self.size
+			halign:"center"
+			valign:"bottom"
+			font_size:'150sp'
+			font_name:"./fonts/Roboto-Light.ttf"
+			size_hint:(1,.4)
+			pos_hint:{"top":1}
+		Label:
+			text:root.minutes
+			text_size:self.size
+			halign:"center"
+			valign:"top"
+			font_size:'150sp'
+			font_name:"./fonts/Roboto-Thin.ttf"
+			size_hint:(1,.4)
+			pos_hint:{"top":.6}
+		Label:
+			text:root.date
+			text_size:self.size
+			halign:"center"
+			valign:"middle"
+			font_size:'75sp'
+			font_name:"./fonts/Roboto-Thin.ttf"
+			size_hint:(1,.2)
+			pos_hint:{"top":.2}
